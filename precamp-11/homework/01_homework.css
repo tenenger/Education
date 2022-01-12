@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    color: gray;
+}
+h5 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.outer {
+    margin: auto;
+    padding:50px 90px 50px 90px;
+    width:800px;
+    border: 1px rgba(51, 51, 238, 0.768) solid;
+    border-radius: 10px;
+    box-shadow: -1px 10px 10px 15px rgba(99, 99, 194, 0.111);
+}
+#main__input {
+    border:none;
+    border-bottom:1px solid rgba(51, 51, 238, 0.768);
+    width:100%;
+    height:40px;
+}
+.title {
+    line-height: 33px;
+    color: rgba(51, 51, 238, 0.768);
+    padding-bottom: 20px;
+}
+.main_gender_input {
+    padding: 40px;
+    color: black;
+    text-align: center;
+}
+.main__agree {
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+.submit {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.main__submit__line {
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px dotted gray;
+}
+.submit__btn {
+    width:570px;
+    height:60px;
+    border-color: rgba(51, 51, 238, 0.768);
+    border-radius: 10px;
+    color:rgba(51, 51, 238, 0.768);
+    background-color: white;
+}

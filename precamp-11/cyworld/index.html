@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>싸이월드</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <script>
+        function menuhome() {
+            document.getElementById('contentframe').setAttribute("src", "home.html")
+            document.getElementById('menuhome').style = "color: black; background-color: white;"
+            document.getElementById('menugame').style = "color: white; background-color: #298eb5;"
+            document.getElementById('menujukebox').style = "color: white; background-color: #298eb5;"
+        }
+
+        function menugame() {
+            document.getElementById('contentframe').setAttribute("src", "game.html")
+            document.getElementById('menuhome').style = "color: white; background-color: #298eb5;"
+            document.getElementById('menugame').style = "color: black; background-color: white;"
+            document.getElementById('menujukebox').style = "color: white; background-color: #298eb5;"
+        }
+
+        function menujukebox() {
+            document.getElementById('contentframe').setAttribute("src", "jukebox.html")
+            document.getElementById('menuhome').style = "color: white; background-color: #298eb5;"
+            document.getElementById('menugame').style = "color: white; background-color: #298eb5;"
+            document.getElementById('menujukebox').style = "color: black; background-color: white;"
+        }
+    </script>
+</head>
+<body>
+    <div class="background">
+        <div class="outerbox">
+            <div class="wrapper">
+                <div class="wrapper__left">
+                    <div class="wrapper__left__header">
+                        <div class="today">
+                            Today
+                            <span class="zero">0</span>
+                            | Total
+                            <span class="count">12345</span>
+                        </div>
+                    </div>
+                    <div class="wrapper__left__body">
+                        <div class="left__body__header">
+                            <div class="left__body__header__gray"></div>
+                            <div class="left__body__header__line"></div>
+                        </div>
+                        <div class="left__body__profile">
+                            <div>이름</div>
+                            <div>Phone</div>
+                            <div>E-mail</div>
+                            <div>인스타그램</div>
+                        </div>
+                        <div class="left__footer__mood">
+                            <div>
+                                오늘의 기분
+                            </div>
+                            <select class="footer__mood__select">
+                                <option disabled selected>선택해주세요</option>
+                                <option >기쁨 😁</option>
+                                <option >슬픔 😂</option>
+                                <option >행복 😆</option>
+                                <option >화남 🤬</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper__right">
+                    <div class="wrapper__right__header">
+                        <div class="right__header__left">사이좋은 사람들, 싸이월드</div>
+                        <div class="right__header__right">사생활보호설정▶</div>
+                    </div>
+                    <div class="wrapper__right__body">
+                        <iframe id="contentframe" src="./home.html"></iframe>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div id="menuhome" class="navigation__item" onclick="menuhome()">홈</div>
+                    <div id="menugame" class="navigation__item" onclick="menugame()">게임</div>
+                    <div id="menujukebox" class="navigation__item"onclick="menujukebox()" >주크박스</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

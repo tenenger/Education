@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>이벤트 감지</title>
+    <script src="07-signup.js"></script>
+</head>
+<body>
+    <div>
+        <input oninput="enrollbtn()" id="email" type="text" placeholder="이메일을 입력해 주세요">
+    </div>
+    <div>
+        <input oninput="enrollbtn()" id="pwd1" type="text" placeholder="비밀번호를 입력해 주세요">
+    </div>
+    <div>
+        <input oninput="enrollbtn()" id="pwd2" type="text" placeholder="비밀번호를 다시 입력해 주세요">
+    </div>
+    <button id="enroll" disabled onclick="enrollbtn()">회원가입</button>
+</body>
+</html>

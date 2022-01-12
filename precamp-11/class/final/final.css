@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    color: gray;
+}
+.outer {
+    margin: auto;
+    width:500px;
+    border: 1px rgba(51, 51, 238, 0.768) solid;
+    border-radius: 10px;
+    box-shadow: -1px 10px 10px 15px rgba(99, 99, 194, 0.111);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#main__input {
+    border:1px solid rgba(51, 51, 238, 0.768);
+    width:400px;
+    height:40px;
+    margin:20px;
+    padding-left:10px;
+    border-radius: 5px;
+}
+.number__input1 {
+    border:1px solid rgba(51, 51, 238, 0.768);
+    width:100px;
+    height:40px;
+    margin:20px;
+    padding-left:10px;
+    border-radius: 5px;
+}
+.title {
+    line-height: 33px;
+    color: rgba(51, 51, 238, 0.768);
+    padding-bottom: 20px;
+}
+.main_gender_input {
+    padding: 40px;
+    color: black;
+    text-align: center;
+}
+.main__agree {
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+.submit {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.main__submit__line {
+    padding-bottom: 30px;
+    border-top: 1px dotted gray;
+    width:300px;
+}
+.submit__btn {
+    width:300px;
+    height:60px;
+    border-color: rgba(51, 51, 238, 0.768);
+    border-radius: 10px;
+    color:rgba(51, 51, 238, 0.768);
+    background-color: white;
+}
+.number__input1{
+    width:30%;
+}
+.identi__submit {
+
+}

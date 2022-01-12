@@ -1,0 +1,22 @@
+.a1 {
+    width:100px;
+    height:100px;
+    background-color: slateblue;
+    border: 1px solid red;
+}
+.pat {
+    width:500px;
+    height:500px;
+    border:1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+/* flex의 방향은 justify-content(같은방향)와 align-item(수직방향)으로 정렬한다. */

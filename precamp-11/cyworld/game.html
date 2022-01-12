@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>HOME</title>
+    <link href="style/game.css" rel="stylesheet">
+    <script>
+        function startword () {
+            const word = document.getElementById('word').innerText
+            const lastword = word[word.length -1]
+            const myword = document.getElementById('myword').value
+            const firstword = myword[0]
+
+            // 만약 firstword와 lastword가 같다면
+                // 결과란에 정답입니다를 띄운다.
+                // 제시어를 입력값으로 교체해준다.
+                // 입력값을 비운다.
+            // 만약 firstword와 lastword가 다르면
+                // 결과란에 틀렸습니다를 띄운다.
+                // 입력값을 비운다.
+            if (firstword === lastword) {
+                document.getElementById('result').innerText = '정답입니다.'
+                document.getElementById('word').innerText = myword
+                document.getElementById('myword').value = ''
+            }
+            else {
+                document.getElementById('result').innerText = '틀렸습니다.'
+                document.getElementById('myword').value = ''
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="main__header">
+            <div class="main__header__header">
+                <div class="header__header__title title">Game</div>
+                <div class="header__header__subtitle subtitle">TODAY CHOiCE</div>
+            </div> 
+            <hr class="main__header__line">
+        </div>
+        <div class="main__body__game game1">
+            <img class="train"src="./images/word.png">
+            <div class="game__title">끝말잇기</div>
+            <div class="game__subtitle">제시어 : <span id="word">코드캠프</span></div>
+            <div class="word__text">
+                <input id="myword" type="text" placeholder="단어를 입력하세요">
+                <button class="search" onclick="startword()">입력</button>
+            </div>
+            <div id="result">결과!</div>
+        </div>
+        <div class="main__body__game game2">
+            <img class="lotto"src="./images/lotto.png">
+            <div class="game__title">LOTTO</div>
+            <div class="game__subtitle">버튼을 누르세요.</div>
+            <div class="numbers">
+                <span class="number">
+                    3
+                </span>
+                <span class="number">
+                    5
+                </span>
+                <span class="number">
+                    10
+                </span>
+                <span class="number">
+                    24
+                </span>
+                <span class="number">
+                    30
+                </span>
+                <span class="number">
+                    34
+                </span>
+            </div>
+            <button class="search make" onclick="">Button</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 기록 -->
+<!-- 기능을 가진다면 ()를 붙인다. -->
+<!-- 함수 선언식, 함수 표현식, 화살표 함수 -->
+<!-- 함수 만드는 방법은 달라도, 실행방법은 동일하다. -->
+<!-- 내장함수는 시간지연함수와 시간반복함수 -->
+<!-- 시간지연함수는 몇시간 후에 진행되게 한다. -->
+<!-- 시간 반복함수 몇시간마다 진행되게 한다. -->
+<!-- 숙제 -->
+<!-- 싸이월드 주크박스 -->
+<!-- 알고리즘 -->
+<!-- 셀프체크 -->
+<!-- git설치 -->
+
+<!-- 기록 -->
+<!-- 이벤트감지는 이메일, 비밀번호를 모두 입력해야 회원가입 버튼이 활성화되게 하는것. -->

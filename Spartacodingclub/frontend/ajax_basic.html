@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--  ajax를 사용하려면 jquery가 import 되어야 한다.  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+    <body>
+        <script>
+            <!--      ajax 기본 골격      -->
+            $.ajax({
+                type: "GET",
+                url: "여기에URL을입력",
+                data: {},
+                success: function (response) {
+                    console.log(response)
+                }
+            })
+        </script>
+    </body>
+</html>

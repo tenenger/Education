@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./final.css">
+    <script src="final.js"></script>
+</head>
+<body>
+    <div class="outer">
+        <header>
+            <h2 class="title">
+                코드캠프 회원가입
+            </h2>
+        </header>
+        <section class="main">
+            <div class="main__email__input">
+                <input type="text" id="main__input" placeholder="이메일을 입력해주세요">
+            </div>
+            <div class="main__name__input">
+                <input type="text" id="main__input" placeholder="이름을 입력해주세요">
+            </div>
+            <div class="main__pwd__input">
+                <input type="password" id="main__input" class="pw" placeholder="비밀번호를 입력해주세요">
+            </div>
+            <div class="main__pwd__input__re">
+                <input type="password" id="main__input" class="pw" placeholder="비밀번호를 다시 입력해주세요">
+            </div>
+            <div class="number__input">
+                <input id="phone1"class="number__input1"type="text" maxlength="3"oninput="changephone1()">
+                <input id="phone2"class="number__input1"type="text"maxlength="4"oninput="changephone2()" >
+                <input id="phone3"class="number__input1"type="text"maxlength="4">
+            </div>
+            <div>
+                <span id="numbmers">000000</span>
+                <button id="makebtn"onclick="gettoken()">인증번호 전송</button><br>
+                <span id="min">3</span>
+                <span> : </span>
+                <span id="sec">00</span>
+                <button id="setbtn" disabled onclick="ok()">인증완료</button>
+            </div>
+            <select>
+                <option disabled selected>지역을 선택하세요</option>
+                <option>서울</option>
+                <option>인천</option>
+                <option>경기</option>
+            </select><br><br>
+            <div class="main_gender_input">
+                <input type="radio" name="gender"> 여성
+                <input type="radio" name="gender"> 남성
+            </div>
+            <div class="main__submit__line"></div>
+        </section>
+        <footer class="submit">
+            <button class="submit__btn">가입하기</button>
+        </footer>
+    </div>
+</body>
+</html>
+<!-- <div class="outer">
+
+    <input type="text">
+
+    <input type="text">
+    <input type="text">
+    <input type="text">
+
+    <div>
+        <span>000000</span>
+        <span><button>인증번호 전송</button></span>
+    </div>
+    <div>
+        <span>3</span>
+        <span>:</span>
+        <span>00</span>
+        <span><button>인증번호 전송</button></span>
+    </div>
+    <select>
+        <option></option>
+        <option></option>
+        <option></option>
+        <option></option>
+    </select>
+    <div>
+        <input name="gender" type="checkbox">
+        <input name="gender" type="checkbox">
+    </div>
+    <hr>
+</div> -->

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./01_homework.css">
+</head>
+<body>
+    <div class="outer">
+        <header>
+            <h2 class="title">
+                회원 가입을 위해<br>
+                정보를 입력해주세요
+            </h2>
+        </header>
+        <section class="main">
+            <div class="main__email__input">
+                <h5>* 이메일</h5>
+                <input type="text" id="main__input">
+            </div>
+            <div class="main__name__input">
+                <h5>* 이름</h5>
+                <input type="text" id="main__input">
+            </div>
+            <div class="main__pwd__input">
+                <h5>* 비밀번호</h5>
+                <input type="password" id="main__input" class="pw">
+            </div>
+            <div class="main__pwd__input__re">
+                <h5>* 비밀번호 확인</h5>
+                <input type="password" id="main__input" class="pw">
+            </div>
+            <div class="main_gender_input">
+                <input type="radio" name="gender"> 여성
+                <input type="radio" name="gender"> 남성
+            </div>
+            <div class="main__agree">
+                <input type="checkbox">이용약관 개인정보 수집 및 이용, 마케팅 활용 선택에 모두 동의합니다.
+            </div>
+            <div class="main__submit__line"></div>
+        </section>
+        <footer class="submit">
+            <button class="submit__btn">가입하기</button>
+        </footer>
+    </div>
+</body>
+</html>

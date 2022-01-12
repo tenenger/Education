@@ -1,0 +1,112 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html, body {
+    /* 자식 태그의 height가 100% 안될경우 이 CSS를 지정한다. */
+    width:100%;
+    height:100%;
+}
+
+.main {
+    padding:20px 30px 30px 30px;
+    display :flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    width:100%;
+    height:100%;
+}
+.main__header {
+    width:100%;
+    color:gray;
+    font-size: 11px;
+}
+.main__header__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.subtitle {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 8px;
+    color: black;
+    padding-left: 10px;
+}
+.title {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #55B2D4;
+    font-size:18px;
+}
+.main__header__line {
+    margin: 5px 0 5px 0;
+}
+.train {
+    width:50px;
+}
+.main__body__game {
+    width:222px;
+    height:170px;
+    border: 1px solid gray;
+    border-radius:15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color:gray;
+    font-size: 13px;
+    padding:12px 8px 12px 8px;
+    background-color: #f6f6f6;
+    font-weight: bold;
+}
+.game__title {
+    color: black;
+    font-weight: bold;
+}
+#myword {
+    font-size: 11px;
+    width:136px;
+    height:24px;
+    margin-right:5px;
+    border-radius: 5px;
+    border: 1.5px black solid;
+    padding-left: 10px;
+    font-weight: bold;
+}
+.search {
+    font-weight: bold;
+    height:24px;
+    width:40px;
+    font-size: 11px;
+    border-radius: 5px;
+    border: 1.5px black solid;
+    background-color: white;
+}
+.word__text {
+    display: flex;
+    align-items: center;
+}
+.game__subtitle {
+    padding-bottom: 4px;
+}
+.numbers {
+    color:black;
+    width:150px;
+    height:24px;
+    border-radius: 10px;
+    border: 1.5px black solid;
+    text-align:center;
+    background-color: #FFE400;
+    padding:1px;
+}
+.number {
+    padding: 0 3px 0 3px;
+}
+.make {
+    width:64px;
+}
+.lotto {
+    margin-bottom: -13px;
+}
