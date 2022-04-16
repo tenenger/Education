@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- createElement안에 들어간 코드는 html 태그와 이름이 같아야함 -->
+<script type='text/babel'>
+    const root = document.getElementById('root');
+    function BtnAll({banana}) {
+        return (
+            <button style={{
+                backgroundColor: 'tomato',
+                color:'white',
+                padding: '10px 20px',
+                border: '0',
+                borderRadius: '10px',
+            }}>{banana}</button>
+        )
+    }
+    function App () {
+        return (
+            <div>
+                <BtnAll banana='Save Changes'/>
+                <BtnAll banana='Continue'/>
+            </div>
+        )
+    }
+    ReactDOM.render(<App/>, root);
+    
+</script>
+</html>
+
+<!-- 
+
+-->

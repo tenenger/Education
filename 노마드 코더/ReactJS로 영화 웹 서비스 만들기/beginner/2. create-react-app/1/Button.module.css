@@ -1,0 +1,8 @@
+/* css파일 적용시키는 방법 2가지 */
+/* 1. index.js에 import하기 */
+/* 2. 해당 컴포넌트에 import시키기(단 css파일에 module이 들어가야 적용된다.) */
+/* module 사용시 장점: 파일명만 다르면, 클래스명이 같아도 다르게 적용됨. */
+.title {
+    color:white;
+    background-color: tomato;
+}

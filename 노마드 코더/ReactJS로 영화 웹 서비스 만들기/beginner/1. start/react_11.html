@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- createElement안에 들어간 코드는 html 태그와 이름이 같아야함 -->
+<script type='text/babel'>
+    const root = document.getElementById('root');
+    function BtnAll({banana, changeValue}) {
+        return (
+            <button onClick={changeValue} style={{
+                backgroundColor: 'tomato',
+                color:'white',
+                padding: '10px 20px',
+                border: '0',
+                borderRadius: '10px',
+            }}>{banana}</button>
+        )
+    }
+    const MemorizedBtn = React.memo(BtnAll)
+    function App () {
+        const [value, setValue] = React.useState('Save Changes');
+        const changeValue= () => setValue('revert Changes')
+        return (
+            <div>
+                <MemorizedBtn banana={value} changeValue={changeValue}/>
+                <MemorizedBtn banana='Continue'/>
+            </div>
+        )
+    }
+    ReactDOM.render(<App/>, root);
+    
+</script>
+</html>
+
+<!-- 
+(최적화, 선택사항) Reactmemo를 사용하면 불필요한 리렌더링을 막을 수 있다.
+-->

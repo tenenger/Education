@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- createElement안에 들어간 코드는 html 태그와 이름이 같아야함 -->
+<script type='text/babel'>
+    const root = document.getElementById('root');
+    function BtnAll({banana, changeValue}) {
+        return (
+            <button onClick={changeValue} style={{
+                backgroundColor: 'tomato',
+                color:'white',
+                padding: '10px 20px',
+                border: '0',
+                borderRadius: '10px',
+            }}>{banana}</button>
+        )
+    }
+
+    function App () {
+        const [value, setValue] = React.useState('Save Changes');
+        const changeValue= () => setValue('revert Changes')
+        return (
+            <div>
+                <BtnAll banana={value} changeValue={changeValue}/>
+                <BtnAll banana='Continue'/>
+            </div>
+        )
+    }
+    ReactDOM.render(<App/>, root);
+    
+</script>
+</html>
+
+<!-- 
+HTML에 넣은 onClick은 이벤트리스너이지만,
+사용자가 정의한 컴포넌트에 넣은 onClick은 props이다. 사용자 정의컴포넌트에 style을 넣어도 동작하지 않는다. style이라는 props로 보기때문이다.
+-->

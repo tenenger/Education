@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- createElement안에 들어간 코드는 html 태그와 이름이 같아야함 -->
+<script type='text/babel'>
+    const root = document.getElementById('root');
+
+    function App () {
+        const [counter, setCounter] = React.useState(0);
+        const onClick =() => {
+            //setCounter(counter + 1)
+            setCounter((current) => current + 1)
+        };
+        return (
+            <div>
+                <h3>Total Clicks: {counter}</h3>
+                <button onClick={onClick}>Click me</button>
+            </div>
+        )
+    }
+    ReactDOM.render(<App/>, root);
+</script>
+</html>
+
+<!-- 
+useState는 counter말고 다른 변수로 지정해 변화시킬 수 있다.
+이 방법을 이용하기로 생각하자
+-->

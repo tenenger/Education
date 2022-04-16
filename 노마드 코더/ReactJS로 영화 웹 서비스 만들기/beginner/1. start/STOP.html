@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src='https://unpkg.com/prop-types@15.7.2/prop-types.js'></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- createElement안에 들어간 코드는 html 태그와 이름이 같아야함 -->
+<script type='text/babel'>
+    const root = document.getElementById('root');
+    function BtnAll({banana, fontSize = 20}) {
+        return (
+            <button style={{
+                backgroundColor: 'tomato',
+                color:'white',
+                padding: '10px 20px',
+                border: '0',
+                borderRadius: '10px',
+                // fontSize: fontSize,
+                fontSize,
+            }}>{banana}</button>
+        )
+    }
+    const MemorizedBtn = React.memo(BtnAll)
+    BtnAll.propTypes = {
+        banana: PropTypes.string,
+        fontSize: PropTypes.number,
+    }
+    function App () {
+        const [value, setValue] = React.useState('Save Changes');
+        const changeValue= () => setValue('revert Changes')
+        return (
+            <div>
+                <MemorizedBtn banana={value} fontSize={18}/>
+                <MemorizedBtn banana={18}/>
+            </div>
+        )
+    }
+    ReactDOM.render(<App/>, root);
+    
+</script>
+</html>
+
+<!-- 
+(최적화, 선택사항) 만약 props를 잘못적어서 오류가 발생하기 전에 미리 설정할수있다.
+설정하려는 컴포넌트.propTypes = {설정하려는 prop명: PropTypes.number(string 등)}, 
+isRequered를 붙이면 더 확실하게 알 수 있다.
+
+만약 props가 설정되지 않았다면 props에 기본값을 줄 수 있다.
+-->

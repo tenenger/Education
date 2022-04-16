@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- createElement안에 들어간 코드는 html 태그와 이름이 같아야함 -->
+<script type='text/babel'>
+    const root = document.getElementById('root');
+
+    function App () {
+        const [amount, setAmount] = React.useState(0);
+        const [inverted, setInverted] = React.useState(false);
+        const onChange = (e) => {
+            setAmount(e.target.value);
+        };
+        const Reset= () => {
+            setAmount(0);
+        };
+        const Flip = () => {
+            setInverted((current) => !current);
+            Reset();
+        }
+        return (
+            <div>
+                <h1>Super Converter</h1>
+                <div>
+                    <label for="minutes">Minutes</label>
+                    <input value={inverted ? amount : amount * 60} id='minutes' placeholder='Minutes' type='number' onChange={onChange} disabled={!inverted}/>
+    
+                    <label for="hours">Hours</label>
+                    <input value={inverted ? amount /60 : amount}  id='hours' placeholder='Hours' type='number' disabled={inverted} onChange={onChange} />
+                </div>
+                <button onClick={Reset}>Reset</button>
+                <button onClick={Flip}>{inverted ? '분에서 시간으로' : '시간에서 분으로'}</button>
+            </div>
+        )
+    }
+    ReactDOM.render(<App/>, root);
+</script>
+</html>
+
+<!-- 
+주의사항:
+input의 value값을 state의 minutes와 연결시켜줘야한다.
+연결시킴으로써 input의 value값을 변경시킬수있다.
+-->

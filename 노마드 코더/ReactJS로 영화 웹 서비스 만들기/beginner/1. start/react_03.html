@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- createElement안에 들어간 코드는 html 태그와 이름이 같아야함 -->
+<script type='text/babel'>
+    const root = document.getElementById('root');
+    function Title () {
+        return (
+            <h3 id="title" onMouseEnter={() => console.log('mouse enter')}>Hello I'm a title</h3>
+        )
+    };
+    const Button = () => (
+        <button onClick={() => console.log('im clicked')}>Click me</button>
+    );
+    const Container = () => (
+    <div>
+        <Title/> 
+        <Button/>
+    </div>
+    );
+    ReactDOM.render(<Container/>, root);
+</script>
+</html>
+
+<!-- function 함수명 () { return(...)} === const 변수명 = () => (...) -->
+<!-- 함수명과 변수명은 첫글자가 대문자이어야 한다. -->
+<!-- 함수와 변수로 정의할경우 <함수명 또는 변수명/> 으로 불러온다. -->
